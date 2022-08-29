@@ -1,0 +1,9 @@
+export { default as playerF } from './player_f.png';
+export { default as playerFF } from './player_ff.jpeg';
+export { default as playerE } from './player_e.png';
+export { default as playerD } from './player_d.jpeg';
+export { default as playerC } from './player_c.jpeg';
+export { default as playerB } from './player_b.jpeg';
+export { default as playerA } from './player_a.jpeg';
+export { default as playerS } from './player_s.jpeg';
+export { default as playerSS } from './player_ss.jpeg';
