@@ -14,7 +14,7 @@ export const PlayerCall = ({
   children,
 }: PropsWithChildren<PlayerCallProps>) => {
   return (
-    <div className="grid grid-cols-2 gap-1 my-2 p-2 border-solid border-2 border-slate-600">
+    <div className="grid grid-cols-2 gap-1 my-2 p-2 border-solid border-2 border-[#31548b]/30">
       <Category categoryKey="수익" categoryValue={operatingRevenue} />
       <Category categoryKey="날짜" categoryValue={dayjs(date).format('M/D')} />
       <Category categoryKey="수익률" categoryValue={commission + '%'} />

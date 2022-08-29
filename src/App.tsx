@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React, { useEffect, useState } from 'react';
 import { Screen, PlayerInfo, PlayerCall, Category, PlayerHp, Image, Button } from './components';
 import { currentMonthPlayerDB, totalOperatingRevenue, playerLevel } from './database';
@@ -16,6 +17,11 @@ export default function App() {
           <hr className="my-4" />
           <PlayerHp totalOperatingRevenue={totalOperatingRevenue} />
           <hr className="my-4" />
+          <div className="text-[#31548b] text-xs">
+            최근 <span className="text-[#3a5d96]">2</span>건 (
+            <span className="text-[#3a5d96]">{dayjs().month() + 1}</span>월 총
+            <span className="text-[#3a5d96]"> {currentMonthPlayerDB.length}</span>건)
+          </div>
           {!isShowMore ? (
             <React.Fragment>
               <PlayerCall
