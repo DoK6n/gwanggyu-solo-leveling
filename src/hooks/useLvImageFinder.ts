@@ -16,19 +16,31 @@ export const useLvImageFinder = (level: string) => {
       return playerF;
     case LEVEL_CRITERIA['F+']:
       return playerFF;
-    case LEVEL_CRITERIA.E || LEVEL_CRITERIA['E+']:
+    case LEVEL_CRITERIA.E:
       return playerE;
-    case LEVEL_CRITERIA.D || LEVEL_CRITERIA['D+']:
+    case LEVEL_CRITERIA['E+']:
+      return playerE;
+    case LEVEL_CRITERIA.D:
       return playerD;
-    case LEVEL_CRITERIA.C || LEVEL_CRITERIA['C+']:
+    case LEVEL_CRITERIA['D+']:
+      return playerD;
+    case LEVEL_CRITERIA.C:
       return playerC;
-    case LEVEL_CRITERIA.B || LEVEL_CRITERIA['B+']:
+    case LEVEL_CRITERIA['C+']:
+      return playerC;
+    case LEVEL_CRITERIA.B:
       return playerB;
-    case LEVEL_CRITERIA.A || LEVEL_CRITERIA['A+']:
+    case LEVEL_CRITERIA['B+']:
+      return playerB;
+    case LEVEL_CRITERIA.A:
+      return playerA;
+    case LEVEL_CRITERIA['A+']:
       return playerA;
     case LEVEL_CRITERIA.S:
       return playerS;
-    case LEVEL_CRITERIA.SS || LEVEL_CRITERIA.SSS:
+    case LEVEL_CRITERIA.SS:
+      return playerSS;
+    case LEVEL_CRITERIA.SSS:
       return playerSS;
   }
 };
