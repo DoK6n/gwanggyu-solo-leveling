@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "operatingRevenue": 3.5,
+    "date": "2022-08-02",
+    "commission": 0.5,
+    "downPayment": 700
+  },
+  {
+    "id": 2,
+    "operatingRevenue": 4.5,
+    "date": "2022-08-17",
+    "commission": 0.5,
+    "downPayment": 900
+  },
+  {
+    "id": 3,
+    "operatingRevenue": 18,
+    "date": "2022-08-23",
+    "commission": 0.8,
+    "downPayment": 4500
+  }
+]
