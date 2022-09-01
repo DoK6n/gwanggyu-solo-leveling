@@ -5,7 +5,6 @@ import { currentMonthPlayerDB, totalOperatingRevenue, playerLevel } from './data
 
 export default function App() {
   const [isShowMore, setIsShowMore] = useState<boolean>(false);
-  console.log(currentMonthPlayerDB?.length ? '있다' : '없다');
   return (
     <main className="container min-h-screen max-w-full p-1">
       <section className="flex flex-col items-center p-4 m-2">
