@@ -18,7 +18,7 @@ export default function App() {
           <PlayerHp totalOperatingRevenue={totalOperatingRevenue} />
           <hr className="my-4" />
           <div className="text-[#31548b] text-xs">
-            최근 <span className="text-[#3a5d96]">2</span>건 (
+            최근 <span className="text-[#3a5d96]">1</span>건 (
             <span className="text-[#3a5d96]">{dayjs().month() + 1}</span>월 총
             <span className="text-[#3a5d96]"> {currentMonthPlayerDB.length}</span>건)
           </div>
@@ -40,13 +40,6 @@ export default function App() {
                 downPayment={currentMonthPlayerDB[0].downPayment}
                 operatingRevenue={currentMonthPlayerDB[0].operatingRevenue}
                 key={currentMonthPlayerDB[0].id}
-              />
-              <PlayerCall
-                commission={currentMonthPlayerDB[1].commission}
-                date={currentMonthPlayerDB[1].date}
-                downPayment={currentMonthPlayerDB[1].downPayment}
-                operatingRevenue={currentMonthPlayerDB[1].operatingRevenue}
-                key={currentMonthPlayerDB[1].id}
               />
             </React.Fragment>
           ) : (
