@@ -19,5 +19,12 @@
     "date": "2022-08-23",
     "commission": 0.8,
     "downPayment": 4500
+  },
+  {
+    "id": 4,
+    "operatingRevenue": 20,
+    "date": "2022-09-01",
+    "commission": 0.8,
+    "downPayment": 2500
   }
 ]
