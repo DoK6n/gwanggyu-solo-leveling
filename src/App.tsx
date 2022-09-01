@@ -5,6 +5,7 @@ import { currentMonthPlayerDB, totalOperatingRevenue, playerLevel } from './data
 
 export default function App() {
   const [isShowMore, setIsShowMore] = useState<boolean>(false);
+  console.log(currentMonthPlayerDB?.length ? '있다' : '없다');
   return (
     <main className="container min-h-screen max-w-full p-1">
       <section className="flex flex-col items-center p-4 m-2">
@@ -22,7 +23,17 @@ export default function App() {
             <span className="text-[#3a5d96]">{dayjs().month() + 1}</span>월 총
             <span className="text-[#3a5d96]"> {currentMonthPlayerDB.length}</span>건)
           </div>
-          {!isShowMore ? (
+          {isShowMore ? (
+            currentMonthPlayerDB.map(db => (
+              <PlayerCall
+                commission={db.commission}
+                date={db.date}
+                downPayment={db.downPayment}
+                operatingRevenue={db.operatingRevenue}
+                key={db.id}
+              />
+            ))
+          ) : currentMonthPlayerDB?.length ? (
             <React.Fragment>
               <PlayerCall
                 commission={currentMonthPlayerDB[0].commission}
@@ -40,15 +51,7 @@ export default function App() {
               />
             </React.Fragment>
           ) : (
-            currentMonthPlayerDB.map(db => (
-              <PlayerCall
-                commission={db.commission}
-                date={db.date}
-                downPayment={db.downPayment}
-                operatingRevenue={db.operatingRevenue}
-                key={db.id}
-              />
-            ))
+            <PlayerCall commission={0} date={''} downPayment={0} operatingRevenue={0} />
           )}
           <Button isShowMore={isShowMore} setIsShowMore={setIsShowMore}>
             {isShowMore ? '접기' : '더 보기'}
